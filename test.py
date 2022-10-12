@@ -3,17 +3,17 @@ from scipy.integrate import solve_ivp
 import numpy as np
 
 G = 6.673e-11
-M = 1.98892e35 * 1.825465
+M = 1.98892e30 * 1e5
 c = 299792458
 
 def f (_, x):
-  return (x[1], -x[0] + 3 * (x[0] ** 2) * 2 * G * M / (2 * (c ** 2)))
+  return (x[1], -x[0] + 3 * G * M * (x[0] ** 2) / (c ** 2))
 
 def e (_, x):
   return 1 - (2 * G * M) / ((1 / x[0]) * (c ** 2))
 
-y0 = 1392700000
-phi0 = np.pi / 10;
+y0 = 800000000
+phi0 = 30 * np.pi / 180
 r0 = y0 / np.sin(phi0)
 rp0 = -y0 / (np.tan(phi0) * np.sin(phi0))
 u0 = 1 / r0
