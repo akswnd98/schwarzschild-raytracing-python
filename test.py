@@ -45,3 +45,7 @@ plt.plot(r * np.cos(phi_ode), r * np.sin(phi_ode))
 plt.show()
 
 print(u_ode)
+
+G = 6.673e-11
+c = 299792458
+M = 1.98892e30 * 1e5
