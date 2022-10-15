@@ -1,9 +1,32 @@
+import numba as nb
+from time import time
 import numpy as np
 
-G = 6.673e-11
-c = 299792458
-M = 1.98892e30 * 1e3
-rin = 12 * G * M / (c ** 2)
-rout = 24 * G * M / (c ** 2)
+# @nb.njit
+# def f1 ():
+#   a = np.array([1, 2, 3], dtype=np.float64)
+#   b = np.array([1, 2 ,3], dtype=np.float64)
+#   ret = 0
+#   for _ in range(0, 100000000):
+#     ret += np.dot(a, b)
+#   return ret
 
-print(rout)
+# def f2 ():
+#   a = np.array([1, 2, 3], dtype=np.float64)
+#   b = np.array([1, 2 ,3], dtype=np.float64)
+#   ret = 0
+#   for _ in range(0, 100000000):
+#     ret += np.dot(a, b)
+#   return ret
+
+# start = time()
+# f1()
+# end = time()
+# print(end - start)
+
+# start = time()
+# f2()
+# end = time()
+# print(end - start)
+
+print(np.array([np.array([1, 2, 3])]))
